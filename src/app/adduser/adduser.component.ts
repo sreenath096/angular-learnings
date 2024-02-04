@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-adduser',
@@ -8,8 +8,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class AdduserComponent {
   userName: string = '';
   @Output() userAdded = new EventEmitter<string>();
+  @ViewChild('userInput') userInput: ElementRef = {} as ElementRef;
 
-  onUserAdded(input: HTMLInputElement) {
-    this.userAdded.emit(input.value);
+  onUserAdded() {
+    this.userAdded.emit(this.userInput.nativeElement.value);
   }
 }
