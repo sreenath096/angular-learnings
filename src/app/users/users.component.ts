@@ -12,6 +12,7 @@ export class UsersComponent {
   userCreatedStatus: string = 'No User is created';
   userName: string = 'Test user';
   isUserCreated: boolean = false;
+  users = ['user1', 'user2'];
 
   constructor() {
     setTimeout(() => {
@@ -26,6 +27,7 @@ export class UsersComponent {
   changeUserCreatedStatus() {
     this.isUserCreated = true;
     this.userCreatedStatus = 'User is created';
+    this.users.push(this.userName);
   }
 
 }

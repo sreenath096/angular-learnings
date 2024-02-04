@@ -11,6 +11,4 @@
 <ng-template #nouser>
     <div> No User is created </div>
 </ng-template>
-<app-user></app-user>
-<app-user></app-user>
-<app-user></app-user>
+<app-user *ngFor="let user of users"></app-user>
