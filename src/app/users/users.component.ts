@@ -10,11 +10,15 @@ import { Component } from '@angular/core';
 export class UsersComponent {
   allowNewUser: boolean = false;
   userCreatedStatus: string = 'No User is created';
-
+  userName: string = '';
   constructor() {
     setTimeout(() => {
       this.allowNewUser = !this.allowNewUser;
     }, 3000);
+  }
+
+  onUpdateUser(event: Event) {
+    this.userName = (event.target as HTMLInputElement).value;
   }
 
   changeUserCreatedStatus() {
