@@ -9,9 +9,16 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
   allowNewUser: boolean = false;
+  userCreatedStatus: string = 'No User is created';
+
   constructor() {
     setTimeout(() => {
       this.allowNewUser = !this.allowNewUser;
     }, 3000);
   }
+
+  changeUserCreatedStatus() {
+    this.userCreatedStatus = 'User is created';
+  }
+
 }
