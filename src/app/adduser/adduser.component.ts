@@ -9,7 +9,7 @@ export class AdduserComponent {
   userName: string = '';
   @Output() userAdded = new EventEmitter<string>();
 
-  onUserAdded() {
-    this.userAdded.emit(this.userName);
+  onUserAdded(input: HTMLInputElement) {
+    this.userAdded.emit(input.value);
   }
 }
