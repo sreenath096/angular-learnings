@@ -6,7 +6,11 @@
     <div>{{ userName }}</div>
 </div>
 <button class="btn btn-primary" [disabled]="!allowNewUser" (click)="changeUserCreatedStatus()">Add User</button>
-<div *ngIf="isUserCreated"> User is created and the username is {{userName}}</div>
+<div *ngIf="isUserCreated; else nouser"> User is created and the username is {{userName}}</div>
+<!-- <div *ngIf="!isUserCreated"> No User is created </div> -->
+<ng-template #nouser>
+    <div> No User is created </div>
+</ng-template>
 <app-user></app-user>
 <app-user></app-user>
 <app-user></app-user>
