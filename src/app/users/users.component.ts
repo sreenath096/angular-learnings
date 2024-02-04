@@ -11,6 +11,8 @@ export class UsersComponent {
   allowNewUser: boolean = false;
   userCreatedStatus: string = 'No User is created';
   userName: string = 'Test user';
+  isUserCreated: boolean = false;
+
   constructor() {
     setTimeout(() => {
       this.allowNewUser = !this.allowNewUser;
@@ -22,6 +24,7 @@ export class UsersComponent {
   }
 
   changeUserCreatedStatus() {
+    this.isUserCreated = true;
     this.userCreatedStatus = 'User is created';
   }
 
