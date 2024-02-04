@@ -4,10 +4,14 @@ import { Component } from '@angular/core';
   //selector: 'app-users',
   //selector: '[app-users]',
   selector: '.app-users',
-  template: `<h3>Users Component</h3> <app-user></app-user>
-  <app-user></app-user>`,
+  templateUrl: './users.component.html',
   styles: 'h3 { color: blue}'
 })
 export class UsersComponent {
-
+  allowNewUser: boolean = false;
+  constructor() {
+    setTimeout(() => {
+      this.allowNewUser = !this.allowNewUser;
+    }, 3000);
+  }
 }
