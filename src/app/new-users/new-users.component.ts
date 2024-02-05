@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class NewUsersComponent {
   userList: string[] = ['Sreenath'];
   name: string = 'Sreenath';
-  isAvailable: boolean = false;
+  isAvailable: boolean = true;
 
   onUserAdded(event: string) {
     this.userList.push(event);

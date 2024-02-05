@@ -30,3 +30,11 @@
         Show the Div when isAvailable is true
     </div>
 </ng-template>
+
+<div>
+    <button class="btn btn-warning" (click)="isAvailable = !isAvailable">Toggle Condition</button>
+</div>
+
+<div *appAlternateIf="isAvailable">
+    This condition enables custom structural directive
+</div>
