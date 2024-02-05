@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-new-user',
@@ -9,6 +9,7 @@ export class NewUserComponent
   implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   @Input('user') userName: string = '';
   @Input() name: string = '';
+  @ContentChild('userParagraph') userParagraph: ElementRef = {} as ElementRef;
 
   constructor() {
     console.log("constructor called");
@@ -36,6 +37,7 @@ export class NewUserComponent
 
   ngAfterContentInit(): void {
     console.log("ngAfterContentInit called");
+    console.log(this.userParagraph);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -45,5 +47,6 @@ export class NewUserComponent
 
   ngOnInit(): void {
     console.log("ngOnInit called");
+    console.log(this.userParagraph);
   }
 }
