@@ -38,3 +38,9 @@
 <div *appAlternateIf="isAvailable">
     This condition enables custom structural directive
 </div>
+
+<div [ngSwitch]="value">
+    <div *ngSwitchCase="10">Value is 10</div>
+    <div *ngSwitchCase="15">Value is 15</div>
+    <div *ngSwitchDefault>Value is default</div>
+</div>

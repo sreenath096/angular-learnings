@@ -9,6 +9,7 @@ export class NewUsersComponent {
   userList: string[] = ['Sreenath'];
   name: string = 'Sreenath';
   isAvailable: boolean = true;
+  value: number = 12;
 
   onUserAdded(event: string) {
     this.userList.push(event);
