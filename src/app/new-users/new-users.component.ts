@@ -16,4 +16,8 @@ export class NewUsersComponent {
   onNameChange() {
     this.name = 'devil';
   }
+
+  onDeleteComponent() {
+    this.userList = [];
+  }
 }
