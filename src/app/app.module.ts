@@ -12,6 +12,8 @@ import { AdduserComponent } from './adduser/adduser.component';
 import { HighlightTextDirective } from './Directives/HightlightText.directive';
 import { RendererHighlightDirective } from './Directives/renderer-highlight.directive';
 import { AlternateIfDirective } from './Directives/alternate-if.directive';
+import { ServiceuserComponent } from './serviceuser/serviceuser.component';
+import { AddserviceuserComponent } from './addserviceuser/addserviceuser.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AlternateIfDirective } from './Directives/alternate-if.directive';
     AdduserComponent,
     HighlightTextDirective,
     RendererHighlightDirective,
-    AlternateIfDirective
+    AlternateIfDirective,
+    ServiceuserComponent,
+    AddserviceuserComponent
   ],
   imports: [
     BrowserModule,

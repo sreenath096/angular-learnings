@@ -9,11 +9,24 @@
     </div>
   </div>
 </div> -->
-
+<!-- 
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
       <app-new-users></app-new-users>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row my-3">
+    <div class="col-md-12">
+      <app-addserviceuser></app-addserviceuser>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <app-serviceuser *ngFor="let user of users; let i = index" [user]="user" [id]="i"></app-serviceuser>
     </div>
   </div>
 </div>
