@@ -10,7 +10,7 @@ import { NewUsersComponent } from './new-users/new-users.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { HighlightTextDirective } from './Directives/HightlightText.directive';
-import { RendererHighlightDirective } from './directives/renderer-highlight.directive';
+import { RendererHighlightDirective } from './Directives/renderer-highlight.directive';
 
 @NgModule({
   declarations: [
