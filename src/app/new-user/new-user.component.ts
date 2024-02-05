@@ -12,41 +12,41 @@ export class NewUserComponent
   @ContentChild('userParagraph') userParagraph: ElementRef = {} as ElementRef;
 
   constructor() {
-    console.log("constructor called");
+    //console.log("constructor called");
   }
 
   ngAfterContentChecked(): void {
-    console.log("ngAfterContentChecked called");
+    //console.log("ngAfterContentChecked called");
   }
 
   ngAfterViewInit(): void {
-    console.log("ngAfterViewInit called");
+    //console.log("ngAfterViewInit called");
   }
 
   ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked called");
+    //console.log("ngAfterViewChecked called");
   }
 
   ngOnDestroy(): void {
-    console.log("ngOnDestroy called");
+    //console.log("ngOnDestroy called");
   }
 
   ngDoCheck(): void {
-    console.log("ngDoCheck called");
+    //console.log("ngDoCheck called");
   }
 
   ngAfterContentInit(): void {
-    console.log("ngAfterContentInit called");
-    console.log(this.userParagraph);
+    //console.log("ngAfterContentInit called");
+    //console.log(this.userParagraph);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("ngOnChanges called");
-    console.log(changes);
+    //console.log("ngOnChanges called");
+    //console.log(changes);
   }
 
   ngOnInit(): void {
-    console.log("ngOnInit called");
-    console.log(this.userParagraph);
+    //console.log("ngOnInit called");
+    //console.log(this.userParagraph);
   }
 }

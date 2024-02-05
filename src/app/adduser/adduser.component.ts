@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { LoggingService } from '../services/logging.service';
 
 @Component({
   selector: 'app-adduser',
@@ -11,6 +12,9 @@ export class AdduserComponent {
   @ViewChild('userInput') userInput: ElementRef = {} as ElementRef;
 
   onUserAdded() {
+    this.userName = this.userInput.nativeElement.value;
     this.userAdded.emit(this.userInput.nativeElement.value);
+    let loggingService = new LoggingService();
+    loggingService.logToConsole("User is added " + this.userName);
   }
 }
