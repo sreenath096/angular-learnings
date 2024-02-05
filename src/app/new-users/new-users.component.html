@@ -20,3 +20,13 @@
 <div appRendererHighlight [defaultColor]="'blue'" highlightColor="orange">
     Using Renderer2 - Please add the background color to Green
 </div>
+
+<div *ngIf="isAvailable">
+    Show the Div when isAvailable is true
+</div>
+
+<ng-template [ngIf]="isAvailable">
+    <div>
+        Show the Div when isAvailable is true
+    </div>
+</ng-template>
