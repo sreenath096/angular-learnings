@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { NewUsersComponent } from './new-users/new-users.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { AdduserComponent } from './adduser/adduser.component';
+import { HighlightTextDirective } from './Directives/HightlightText.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AdduserComponent } from './adduser/adduser.component';
     UsersComponent,
     NewUsersComponent,
     NewUserComponent,
-    AdduserComponent
+    AdduserComponent,
+    HighlightTextDirective
   ],
   imports: [
     BrowserModule,

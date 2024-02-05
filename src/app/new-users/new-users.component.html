@@ -8,3 +8,11 @@
         <p #userParagraph>Username : {{ user }}</p>
     </app-new-user>
 </div>
+
+<div [ngStyle]="{'background-color': 'red'}">
+    Using builtin ngStyle Attribute - Please add the background color to Red
+</div>
+
+<div appHighlightText>
+    Using custom Attribute - Please add the background color to Red
+</div>
