@@ -14,6 +14,8 @@ import { RendererHighlightDirective } from './Directives/renderer-highlight.dire
 import { AlternateIfDirective } from './Directives/alternate-if.directive';
 import { ServiceuserComponent } from './serviceuser/serviceuser.component';
 import { AddserviceuserComponent } from './addserviceuser/addserviceuser.component';
+import { UserService } from './services/user.service';
+import { LogService } from './services/log.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,7 @@ import { AddserviceuserComponent } from './addserviceuser/addserviceuser.compone
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService, LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
